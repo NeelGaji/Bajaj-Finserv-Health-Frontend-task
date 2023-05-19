@@ -6,10 +6,10 @@ fetch('https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/
         const searchInput = document.getElementById('searchInput');
         const skillsFilter = document.getElementById('skillsFilter');
 
-        // Create table header row
+       
         const headerRow = document.createElement('tr');
 
-        // Get the keys from the first employee object
+        
         const keys = Object.keys(employees[0]);
 
         keys.forEach(key => {
@@ -20,7 +20,7 @@ fetch('https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/
 
         table.appendChild(headerRow);
 
-        // Function to populate skills filter options
+        
         function populateSkillsFilter() {
           const skillsSet = new Set();
 
@@ -45,7 +45,7 @@ fetch('https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/
           });
         }
 
-        // Function to filter and display table rows based on search input and skills filter
+        
         function filterTable() {
           const searchValue = searchInput.value.toLowerCase();
           const skillsValue = skillsFilter.value.toLowerCase();
@@ -53,7 +53,7 @@ fetch('https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/
           // Clear table body
           table.innerHTML = '';
 
-          // Create table header row
+          
           table.appendChild(headerRow);
 
           employees.forEach(employee => {
@@ -86,14 +86,14 @@ fetch('https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/
           });
         }
 
-        // Attach event listeners to the search input and skills filter
+        
         searchInput.addEventListener('input', filterTable);
         skillsFilter.addEventListener('change', filterTable);
 
-        // Initial display of table with all employees
+        
         filterTable();
 
-        // Populate skills filter options
+        
         populateSkillsFilter();
       })
       .catch(error => {
