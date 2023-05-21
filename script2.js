@@ -29,22 +29,22 @@ fetch("https://raw.githubusercontent.com/dixitsoham7/dixitsoham7.github.io/main/
       skillsContainer.innerHTML = "";
 
       skillsSet.forEach((skill) => {
-        // Create checkbox element
+        
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.value = skill;
         checkbox.addEventListener("change", filterTable); // Add event listener to trigger filtering on checkbox change
 
-        // Create label element for checkbox
+        
         const label = document.createElement("label");
         label.appendChild(checkbox);
         label.appendChild(document.createTextNode(skill));
 
-        // Append the label to the skills container
+        
         skillsContainer.appendChild(label);
       });
 
-      // Append the skills container above the table
+      
       table.parentNode.insertBefore(skillsContainer, table);
     }
 
