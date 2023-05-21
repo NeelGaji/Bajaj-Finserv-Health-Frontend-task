@@ -18,6 +18,8 @@ label{
     font-size: 1rem;
     color: whitesmoke;
     font-weight: 400;
+    text-align: center !important;
+    justify-content: center !important;
 }
 section{
     direction: flex;
